@@ -12,15 +12,11 @@ installfiles = {
 textfiles = {"README.md"}
 unpackfiles = {'atenddvi.dtx'}
 
-checkconfigs = {"build","config-plain"}
-maxprintline=10000
-checkruns = 2
-
 
 packtdszip  = true
 
 maxprintline=10000
-checkruns = 2
+
 
 
 function update_tag(file,content,tagname,tagdate)
