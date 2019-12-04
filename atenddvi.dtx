@@ -1,13 +1,13 @@
 % \iffalse meta-comment
 %
 % File: atenddvi.dtx
-% Version: 2016/05/16 v1.2
+% Version: 2019/12/15 v1.3
 % Info: At end DVI hook
 %
 % Copyright (C)
 %    2007 Heiko Oberdiek
 %    2016-2019 Oberdiek Package Support Group
-%    https://github.com/ho-tex/oberdiek/issues
+%    https://github.com/ho-tex/atenddvi/issues
 %
 % This work may be distributed and/or modified under the
 % conditions of the LaTeX Project Public License, either
@@ -23,15 +23,15 @@
 %
 % The Current Maintainers of this work are
 % Heiko Oberdiek and the Oberdiek Package Support Group
-% https://github.com/ho-tex/oberdiek/issues
+% https://github.com/ho-tex/atenddvi/issues
 %
 % This work consists of the main source file atenddvi.dtx
 % and the derived files
 %    atenddvi.sty, atenddvi.pdf, atenddvi.ins, atenddvi.drv.
 %
 % Distribution:
-%    CTAN:macros/latex/contrib/oberdiek/atenddvi.dtx
-%    CTAN:macros/latex/contrib/oberdiek/atenddvi.pdf
+%    CTAN:macros/latex/contrib/atenddvi/atenddvi.dtx
+%    CTAN:macros/latex/contrib/atenddvi/atenddvi.pdf
 %
 % Unpacking:
 %    (a) If atenddvi.ins is present:
@@ -60,9 +60,9 @@
 %       pdflatex atenddvi.dtx
 %
 % Installation:
-%    TDS:tex/latex/oberdiek/atenddvi.sty
-%    TDS:doc/latex/oberdiek/atenddvi.pdf
-%    TDS:source/latex/oberdiek/atenddvi.dtx
+%    TDS:tex/latex/atenddvi/atenddvi.sty
+%    TDS:doc/latex/atenddvi/atenddvi.pdf
+%    TDS:source/latex/atenddvi/atenddvi.dtx
 %
 %<*ignore>
 \begingroup
@@ -79,7 +79,7 @@
 \input docstrip.tex
 \Msg{************************************************************************}
 \Msg{* Installation}
-\Msg{* Package: atenddvi 2016/05/16 v1.2 At end DVI hook (HO)}
+\Msg{* Package: atenddvi 2019/12/15 v1.3 At end DVI hook (HO)}
 \Msg{************************************************************************}
 
 \keepsilent
@@ -91,7 +91,7 @@
 This is a generated file.
 
 Project: atenddvi
-Version: 2016/05/16 v1.2
+Version: 2019/12/15 v1.3
 
 Copyright (C)
    2007 Heiko Oberdiek
@@ -111,7 +111,7 @@ This work has the LPPL maintenance status "maintained".
 
 The Current Maintainers of this work are
 Heiko Oberdiek and the Oberdiek Package Support Group
-https://github.com/ho-tex/oberdiek/issues
+https://github.com/ho-tex/atenddvi/issues
 
 
 This work consists of the main source file atenddvi.dtx
@@ -124,7 +124,7 @@ and the derived files
 \generate{%
   \file{atenddvi.ins}{\from{atenddvi.dtx}{install}}%
   \file{atenddvi.drv}{\from{atenddvi.dtx}{driver}}%
-  \usedir{tex/latex/oberdiek}%
+  \usedir{tex/latex/atenddvi}%
   \file{atenddvi.sty}{\from{atenddvi.dtx}{package}}%
 }
 
@@ -152,7 +152,7 @@ and the derived files
 %<*driver>
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesFile{atenddvi.drv}%
-  [2016/05/16 v1.2 At end DVI hook (HO)]%
+  [2019/12/15 v1.3 At end DVI hook (HO)]%
 \documentclass{ltxdoc}
 \usepackage{holtxdoc}[2011/11/22]
 \begin{document}
@@ -166,9 +166,9 @@ and the derived files
 % \GetFileInfo{atenddvi.drv}
 %
 % \title{The \xpackage{atenddvi} package}
-% \date{2016/05/16 v1.2}
+% \date{2019/12/15 v1.3}
 % \author{Heiko Oberdiek\thanks
-% {Please report any issues at \url{https://github.com/ho-tex/oberdiek/issues}}}
+% {Please report any issues at \url{https://github.com/ho-tex/atenddvi/issues}}}
 %
 % \maketitle
 %
@@ -221,7 +221,7 @@ and the derived files
 %<*package>
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesPackage{atenddvi}%
-  [2016/05/16 v1.2 At end DVI hook (HO)]%
+  [2019/12/15 v1.3 At end DVI hook (HO)]%
 %    \end{macrocode}
 %
 %    Load the required packages
@@ -377,17 +377,17 @@ and the derived files
 % \paragraph{Package.} This package is available on
 % CTAN\footnote{\CTANpkg{atenddvi}}:
 % \begin{description}
-% \item[\CTAN{macros/latex/contrib/oberdiek/atenddvi.dtx}] The source file.
-% \item[\CTAN{macros/latex/contrib/oberdiek/atenddvi.pdf}] Documentation.
+% \item[\CTAN{macros/latex/contrib/atenddvi/atenddvi.dtx}] The source file.
+% \item[\CTAN{macros/latex/contrib/atenddvi/atenddvi.pdf}] Documentation.
 % \end{description}
 %
 %
-% \paragraph{Bundle.} All the packages of the bundle `oberdiek'
+% \paragraph{Bundle.} All the packages of the bundle `atenddvi'
 % are also available in a TDS compliant ZIP archive. There
 % the packages are already unpacked and the documentation files
 % are generated. The files and directories obey the TDS standard.
 % \begin{description}
-% \item[\CTANinstall{install/macros/latex/contrib/oberdiek.tds.zip}]
+% \item[\CTANinstall{install/macros/latex/contrib/atenddvi.tds.zip}]
 % \end{description}
 % \emph{TDS} refers to the standard ``A Directory Structure
 % for \TeX\ Files'' (\CTANpkg{tds}). Directories
@@ -395,11 +395,11 @@ and the derived files
 %
 % \subsection{Bundle installation}
 %
-% \paragraph{Unpacking.} Unpack the \xfile{oberdiek.tds.zip} in the
+% \paragraph{Unpacking.} Unpack the \xfile{atenddvi.tds.zip} in the
 % TDS tree (also known as \xfile{texmf} tree) of your choice.
 % Example (linux):
 % \begin{quote}
-%   |unzip oberdiek.tds.zip -d ~/texmf|
+%   |unzip atenddvi.tds.zip -d ~/texmf|
 % \end{quote}
 %
 % \subsection{Package installation}
@@ -417,9 +417,9 @@ and the derived files
 % \begin{quote}
 % \def\t{^^A
 % \begin{tabular}{@{}>{\ttfamily}l@{ $\rightarrow$ }>{\ttfamily}l@{}}
-%   atenddvi.sty & tex/latex/oberdiek/atenddvi.sty\\
-%   atenddvi.pdf & doc/latex/oberdiek/atenddvi.pdf\\
-%   atenddvi.dtx & source/latex/oberdiek/atenddvi.dtx\\
+%   atenddvi.sty & tex/latex/atenddvi/atenddvi.sty\\
+%   atenddvi.pdf & doc/latex/atenddvi/atenddvi.pdf\\
+%   atenddvi.dtx & source/latex/atenddvi/atenddvi.dtx\\
 % \end{tabular}^^A
 % }^^A
 % \sbox0{\t}^^A
@@ -539,6 +539,10 @@ and the derived files
 %     Package \xpackage{atbegshi} replaces package \xpackage{everyshi}.
 %   \end{Version}
 %   \begin{Version}{2016/05/16 v1.2}
+%   \item
+%     Documentation updates.
+%   \end{Version}
+%   \begin{Version}{2019/12/15 v1.3}
 %   \item
 %     Documentation updates.
 %   \end{Version}
