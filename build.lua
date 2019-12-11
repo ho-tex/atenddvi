@@ -3,11 +3,6 @@
 
 module = "atenddvi"
 
-installfiles = {
-'*.sty',
-'*.dtx','*.pdf'
-}
-
 
 textfiles = {"README.md"}
 unpackfiles = {'atenddvi.dtx'}
