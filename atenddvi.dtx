@@ -1,12 +1,12 @@
 % \iffalse meta-comment
 %
 % File: atenddvi.dtx
-% Version: 2019-12-11 v1.4
+% Version: 2020-11-11 v1.5
 % Info: At end DVI hook
 %
 % Copyright (C)
 %    2007 Heiko Oberdiek
-%    2016-2019 Oberdiek Package Support Group
+%    2016-2020 Oberdiek Package Support Group
 %    https://github.com/ho-tex/atenddvi/issues
 %
 % This work may be distributed and/or modified under the
@@ -61,6 +61,7 @@
 %
 % Installation:
 %    TDS:tex/latex/atenddvi/atenddvi.sty
+%    TDS:tex/latex/atenddvi/atenddvi-2019-12-11.sty
 %    TDS:doc/latex/atenddvi/atenddvi.pdf
 %    TDS:source/latex/atenddvi/atenddvi.dtx
 %
@@ -79,7 +80,7 @@
 \input docstrip.tex
 \Msg{************************************************************************}
 \Msg{* Installation}
-\Msg{* Package: atenddvi 2019-12-11 v1.4 At end DVI hook (HO)}
+\Msg{* Package: atenddvi 2020-11-11 v1.5 At end DVI hook (HO)}
 \Msg{************************************************************************}
 
 \keepsilent
@@ -91,11 +92,11 @@
 This is a generated file.
 
 Project: atenddvi
-Version: 2019-12-11 v1.4
+Version: 2020-11-11 v1.5
 
 Copyright (C)
    2007 Heiko Oberdiek
-   2016-2019 Oberdiek Package Support Group
+   2016-2020 Oberdiek Package Support Group
 
 This work may be distributed and/or modified under the
 conditions of the LaTeX Project Public License, either
@@ -126,6 +127,7 @@ and the derived files
   \file{atenddvi.drv}{\from{atenddvi.dtx}{driver}}%
   \usedir{tex/latex/atenddvi}%
   \file{atenddvi.sty}{\from{atenddvi.dtx}{package}}%
+  \file{atenddvi-2019-12-11.sty}{\from{atenddvi.dtx}{packagefrozen}}
 }
 
 \catcode32=13\relax% active space
@@ -152,7 +154,7 @@ and the derived files
 %<*driver>
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesFile{atenddvi.drv}%
-  [2019-12-11 v1.4 At end DVI hook (HO)]%
+  [2020-11-11 v1.5 At end DVI hook (HO)]%
 \documentclass{ltxdoc}
 \usepackage{holtxdoc}[2011/11/22]
 \begin{document}
@@ -166,11 +168,14 @@ and the derived files
 % \GetFileInfo{atenddvi.drv}
 %
 % \title{The \xpackage{atenddvi} package}
-% \date{2019-12-11 v1.4}
+% \date{2020-11-11 v1.5}
 % \author{Heiko Oberdiek\thanks
 % {Please report any issues at \url{https://github.com/ho-tex/atenddvi/issues}}}
 %
 % \maketitle
+%
+%  \textbf{This package is unneeded and does nothing with a \LaTeX{} version
+%  2020-10-01 or newer as \cs{AtBeginDvi} is then provided by the format.}
 %
 % \begin{abstract}
 % \LaTeX\ offers \cs{AtBeginDvi}. This package \xpackage{atenddvi}
@@ -216,12 +221,31 @@ and the derived files
 % }
 %
 % \section{Implementation}
-%
 %    \begin{macrocode}
 %<*package>
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesPackage{atenddvi}%
-  [2019-12-11 v1.4 At end DVI hook (HO)]%
+  [2020-11-11 v1.5 At end DVI hook (HO)]%
+\providecommand\IfFormatAtLeastTF{\@ifl@t@r\fmtversion}
+\IfFormatAtLeastTF{2020/10/01}
+  {%
+   \PackageWarning{atenddvi}
+     {Functionality of this package is already\MessageBreak
+      provided by LaTeX.\MessageBreak\MessageBreak
+      It is therefore no longer necessary to load it\MessageBreak
+      and you can safely remove it.\MessageBreak
+      Found on}{}%
+  }{\input{atenddvi-2019-12-11.sty}}
+\IfFormatAtLeastTF{2020/10/01}{}{\endinput}
+
+%</package>
+%    \end{macrocode}
+%
+%    \begin{macrocode}
+%<*packagefrozen>
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{atenddvi}%
+  [2020-11-11 v1.5 At end DVI hook / legacy frozen code (HO) ]%
 %    \end{macrocode}
 %
 %    Load the required packages
@@ -367,7 +391,7 @@ and the derived files
 %    \end{macro}
 %
 %    \begin{macrocode}
-%</package>
+%</packagefrozen>
 %    \end{macrocode}
 %
 % \section{Installation}
@@ -380,27 +404,6 @@ and the derived files
 % \item[\CTAN{macros/latex/contrib/atenddvi/atenddvi.dtx}] The source file.
 % \item[\CTAN{macros/latex/contrib/atenddvi/atenddvi.pdf}] Documentation.
 % \end{description}
-%
-%
-% \paragraph{Bundle.} All the packages of the bundle `atenddvi'
-% are also available in a TDS compliant ZIP archive. There
-% the packages are already unpacked and the documentation files
-% are generated. The files and directories obey the TDS standard.
-% \begin{description}
-% \item[\CTANinstall{install/macros/latex/contrib/atenddvi.tds.zip}]
-% \end{description}
-% \emph{TDS} refers to the standard ``A Directory Structure
-% for \TeX\ Files'' (\CTANpkg{tds}). Directories
-% with \xfile{texmf} in their name are usually organized this way.
-%
-% \subsection{Bundle installation}
-%
-% \paragraph{Unpacking.} Unpack the \xfile{atenddvi.tds.zip} in the
-% TDS tree (also known as \xfile{texmf} tree) of your choice.
-% Example (linux):
-% \begin{quote}
-%   |unzip atenddvi.tds.zip -d ~/texmf|
-% \end{quote}
 %
 % \subsection{Package installation}
 %
@@ -418,6 +421,7 @@ and the derived files
 % \def\t{^^A
 % \begin{tabular}{@{}>{\ttfamily}l@{ $\rightarrow$ }>{\ttfamily}l@{}}
 %   atenddvi.sty & tex/latex/atenddvi/atenddvi.sty\\
+%   atenddvi-2019-12-11.sty & atenddvi-2019-12-11.sty\\
 %   atenddvi.pdf & doc/latex/atenddvi/atenddvi.pdf\\
 %   atenddvi.dtx & source/latex/atenddvi/atenddvi.dtx\\
 % \end{tabular}^^A
@@ -548,6 +552,12 @@ and the derived files
 %   \end{Version}
 %   \begin{Version}{2019-12-11 v1.4}
 %   \item Updated
+%   \end{Version}
+%   \begin{Version}{2020-11-11 v1.5}
+%   \item The package is now unneeded as LaTeX formats
+%   newer than 2020-10-01 provide \cs{AtBeginDvi} and so does nothing
+%   in this case.
+%   The old code has been frozen.
 %   \end{Version}
 % \end{History}
 %

@@ -6,9 +6,11 @@ module = "atenddvi"
 
 textfiles = {"README.md"}
 unpackfiles = {'atenddvi.dtx'}
+installfiles = {
+'*.sty',
+}
 
-
-packtdszip  = true
+packtdszip  = false
 
 maxprintline=10000
 
